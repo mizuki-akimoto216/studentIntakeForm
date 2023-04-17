@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="js/validation.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Student Intake Form</h1>
+        <p>Please fill in fields to register your information</p>
+    </header>
+    <div class="form">
+    <!-- <form> -->
+        <div class="name-section">
+            <div class="mb-3 name">
+                <label for="firstName" class="form-label title-1">First Name</label>
+                <input type="firstName" class="form-control" id="firstName" placeholder="Bob">
+                <div class="valid-feedback"></div>
+                <div class="invalid-feedback">Please input at least 2 letters</div>
+            </div>
+            <div class="mb-3 name">
+                <label for="middleName" class="form-label title-1">Middle Name</label>
+                <input type="middleName" class="form-control" id="middleName" placeholder="Michel">
+            </div>
+            <div class="mb-3 name">
+                <label for="lastName" class="form-label title-1">Last Name</label>
+                <input type="lastName" class="form-control" id="lastName" placeholder="Smith">
+                <div class="valid-feedback"></div>
+                <div class="invalid-feedback">Please input at least 2 letters</div>
+            </div>
+        </div>
+        <fieldset class="mb-3 birthday-section">
+            <legend class="title-1">Birthday</legend>
+            <div class="birthdayFlex">
+                <div class="mb-3 mx-3 date">
+                    <label for="date" class="form-label title-2">Date</label>
+                    <select name="date" id="date" class="form-select">
+                        <option value="" selected>-</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">Please select date</div>
+                </div>
+                <div class="mb-3 mx-3 month">
+                    <label for="month" class="form-label title-2">Month</label>
+                    <select name="month" id="month" class="form-select">
+                        <option value="" selected>-</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">Please select date</div>
+                </div>
+                <div class="mb-3 mx-3 year">
+                    <label for="year" class="form-label title-2">Year</label>
+                    <input type="text" class="form-control" id="year" placeholder="2000">
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">Please input 4 numbers and the year after 1993</div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="mb-3 citizen-section">
+            <legend class="title-1">Citizenship Status</legend>
+            <div class="mb-3 mx-3 form-check">
+                <input class="form-check-input citizenshipStatus" type="radio" name="citizenStatus" value = "canadianPR" id="canadianPR" checked>
+                <label class="form-check-label title-2" for="canadianPR">Canadian/PR</label>
+            </div>
+            <div class="mb-3 mx-3 form-check">
+                <input class="form-check-input citizenshipStatus" type="radio" name="citizenStatus" value = "nonCanadian" id="nonCanadian">
+                <label class="form-check-label title-2" for="nonCanadian">Non-Canadian</label>
+            </div>
+            <div id="canadianPR-form">
+                <div class="mb-3 mx-3">
+                    <label for="sinNumber" class="form-label title-2">Sin Number</label>
+                    <input type="text" class="form-control" id="sinNumber" placeholder="123456789">
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">Please input 9 numbers</div>
+                </div>
+                <fieldset class="mb-3">
+                    <legend class="mx-3 title-2">Address</legend>
+                    <div class="mb-3 mx-5 title-2">
+                        <label for="streetName" class="form-label">Street Name</label>
+                        <input type="text" class="form-control" id="streetName" placeholder="Street Name">
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">Please input at least 3 letters</div>
+                    </div>
+                    <div class="mb-3 mx-5 title-2">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" class="form-control" id="city" placeholder="City">
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">Please input at least 2 letters</div>
+                    </div>
+                    <div class="provincePostalFlex">
+                        <div class="mb-3 mx-5 title-2 province">
+                            <label for="province" class="form-label">Province</label>
+                            <select name ="province" id ="province" class="form-select">
+                                <option value="" selected>Select Province</option>
+                                <option value="Alberta">Alberta</option>
+                                <option value="British Columbia">British Columbia</option>
+                                <option value="Manitoba">Manitoba</option>
+                                <option value="New Brunswick">New Brunswick</option>
+                                <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                                <option value="Northwest Territories">Northwest Territories</option>
+                                <option value="Nova Scotia">Nova Scotia</option>
+                                <option value="Nunavut">Nunavut</option>
+                                <option value="Ontario">Ontario</option>
+                                <option value="Prince Edward Island">Prince Edward Island</option>
+                                <option value="Quebec">Quebec</option>
+                                <option value="Saskatchewan">Saskatchewan</option>
+                                <option value="Yukon">Yukon</option>
+                                </select>
+                                <div class="valid-feedback"></div>
+                                <div class="invalid-feedback">Please select province</div>
+                        </div>
+                        <div class="mb-3 mx-5 title-2 postal">
+                            <label for="postal" class="form-label">Postal</label>
+                            <input type="text" class="form-control" id="postal" placeholder="A1A 1A1">
+                            <div class="valid-feedback"></div>
+                            <div class="invalid-feedback">Please input postal cord with proper format like "A1A 1A1"</div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div id="nonCanadian-form" class="mb-3 mx-3 d-none">
+                <label for="passportNo" class="form-label">Passport Number</label>
+                <input type="text" class="form-control" id="passportNo" placeholder="AAA12345AA">
+                <div class="valid-feedback"></div>
+                <div class="invalid-feedback">Please input passport number with proper format like "AAA12345AA"</div>
+            </div>
+        </fieldset>
+        <div class="mb-3 email-section">
+            <label class="title-1" for="email" class="form-label">Email</label>
+            <input type="text" class="form-control" id="email" placeholder="aaa@aaa.com">
+            <div class="valid-feedback"></div>
+            <div class="invalid-feedback">Please input email address with proper format like "aaa@aaa.com"</div>
+        </div>
+        <div class="button">
+            <button id="btnSignup" class="btn btn-primary" disabled="true">Submit</button>
+        </div>
+    </div>
+    <!-- </form> -->
+</body>
+</html>
